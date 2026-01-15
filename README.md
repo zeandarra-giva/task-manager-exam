@@ -17,27 +17,35 @@ Open terminal and run:
 ```bash
 git clone [https://github.com/YOUR_USERNAME/task-manager-exam.git](https://github.com/YOUR_USERNAME/task-manager-exam.git)
 cd task-manager-exam
+```
 
 ### 3. Clone the Repository
 #### Mac
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
+```
 
 #### Windows
+```bash
 python -m venv .venv
 .venv\Scripts\activate
+```
 
 ### 4. Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
 ### 5. Setup Database
 1. Login to MySQL
+```bash
 mysql -u root -p
+```
 2. Run this command
+```bash
 source schema/db_setup.sql;
-
-### 6. Execute the App
-python3 -m src.main
+```
 
 ## Tech Stack
 
