@@ -1,29 +1,27 @@
-# Task Management CLI Application
+# Python CLI Task Manager
 
-## Overview
-A command-line tool to manage daily tasks, supporting Add, List, Update, Delete, and Complete operations.
+## Overview of the Exam Task
+The task is to create a simple CLI to-doo list app that create, view, update, and delete (CRUD) tasks using OOP principles and database of our choosing to store user data even after exiting the app.
 
-## Prerequisites
-* Python 3.x
-* Database (MySQL or MongoDB)
+## Tech Stack
 
-## Setup Instructions
-1. Clone the repository:
-   `git clone <your-repo-link>`
+* **Language:** Python 3.x
+* **Database:** MySQL
+* **Driver:** `pymysql` (for raw SQL execution)
+* **Architecture:** Modular design separating Database Logic, Business Logic, and User Interface.
 
-2. Install dependencies:
-   `pip install -r requirements.txt`
+## Project Structure
 
-3. Database Configuration:
-   * **MySQL:** Run the script located in `schema/db_setup.sql` to create the database and tables.
-   * **MongoDB:** Ensure your local MongoDB instance is running.
-   * Update `src/db_connection.py` with your specific credentials.
+The project follows a modular architecture to ensure code maintainability:
 
-## Usage
-Run the application from the root directory:
-`python src/main.py`
-
-## Features
-* **Modular Design:** Separation of concerns between database, logic, and UI.
-* **Custom Algorithms:** Custom sorting and filtering logic (no built-in Python filters used).
-* **Persistence:** Tasks are saved to the database and reloaded upon restart.
+```text
+task-manager-exam/
+├── src/
+│   ├── main.py            # Entry point (User Interface & Menu Loop)
+│   ├── task_manager.py    # Business Logic (CRUD operations)
+│   ├── task.py            # Data Model (Task Class)
+│   └── db_connection.py   # Database connection handling
+├── schema/
+│   └── db_setup.sql       # SQL script to initialize the database
+├── .gitignore             # Files to ignore (venv, __pycache__)
+└── README.md              # Documentation
